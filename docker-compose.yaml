@@ -1,0 +1,13 @@
+version: '3.8'  # Specify the Docker Compose version
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"  # Map port 3000 on the host to port 3000 in the container
+    volumes:
+      - ./app:/app        # Mount the app directory to /app in the container
+      - /app/node_modules  # Ignore node_modules to avoid overwriting it
+    environment:
+      NODE_ENV: development  # Define any environment variables (optional)
+    command: npm run start:dev  # Run the app in development mode
