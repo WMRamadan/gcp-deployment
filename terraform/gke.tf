@@ -16,6 +16,10 @@ resource "google_container_cluster" "primary" {
 
   network    = google_compute_network.vpc.name
   subnetwork = google_compute_subnetwork.subnet.name
+
+  node_config {
+    tags = ["gke-cluster"]  # Apply the same tag as in the firewall rule
+  }
 }
 
 # Separately Managed Node Pool
