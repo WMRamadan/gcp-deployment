@@ -35,6 +35,7 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository_owner }}/gcp-deployment:latest
             ghcr.io/${{ github.repository_owner }}/gcp-deployment:${{ github.sha }}
+          outputs: digest
 
       - name: Image digest
         run: echo "Image digest: ${{ steps.build-and-push.outputs.digest }}"
