@@ -1,8 +1,11 @@
 This project provides the following:
 
 1 - Docker build of an application using GitHub Actions
+
 2 - Hosting of docker iamge on GitHub Container Registry
+
 3 - Deployment of application from GCR Image on GKE Cluster using Terraform
+
 4 - VPC restrict access to application from specified IP's
 
 # Requirements:
