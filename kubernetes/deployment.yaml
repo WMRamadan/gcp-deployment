@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: express
-          image: ghcr.io/WMRamadan/gcp-deployment:latest
+          image: ghcr.io/wmramadan/gcp-deployment:latest
           ports:
             - containerPort: 3000
