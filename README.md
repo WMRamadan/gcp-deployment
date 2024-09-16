@@ -58,7 +58,7 @@ kubectl get services
 ```
 After you list services on the line of the `express` app you should see your `EXTERNAL-IP` to be able to access the app.
 
-## Step 6 - Destroy from `/terraform` directory:
+## Step 6 - Destroy deployment from `/terraform` directory:
 ```
 terraform plan -out=tfplan --destroy
 terraform apply "tfplan"
