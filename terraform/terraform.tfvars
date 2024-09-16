@@ -1,3 +1,3 @@
-project_id  = "sodium-hour-435622-n1"
+project_id  = "<project-id>"
 region      = "europe-west4"
 zone        = "a"
