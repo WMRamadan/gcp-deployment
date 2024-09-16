@@ -17,7 +17,9 @@ This project provides the following:
 
 # Setup:
 
-## Step 1 - Update your `Project ID` in the `/terraform/terraform.tfvars` file.
+## Step 1 - Config:
+
+Update your Project ID `project_id` and IP's to deny `deny_ip_ranges_ipv4` in the `/terraform/terraform.tfvars` file.
 
 ## Step 2 - Export your application credentials:
 ```
@@ -55,3 +57,9 @@ kubectl get deployments
 kubectl get services
 ```
 After you list services on the line of the `express` app you should see your `EXTERNAL-IP` to be able to access the app.
+
+## Step 6 - Destroy from `/terraform` directory:
+```
+terraform plan -out=tfplan --destroy
+terraform apply "tfplan"
+```

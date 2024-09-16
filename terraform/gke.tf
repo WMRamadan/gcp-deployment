@@ -18,16 +18,16 @@ resource "google_container_cluster" "primary" {
   subnetwork = google_compute_subnetwork.subnet.name
 
   node_config {
-    tags = ["gke-cluster"]  # Apply the same tag as in the firewall rule
+    tags = ["gke-cluster"] # Apply the same tag as in the firewall rule
   }
 }
 
 # Separately Managed Node Pool
 resource "google_container_node_pool" "primary_nodes" {
-  name       = google_container_cluster.primary.name
-  location   = "${var.region}-${var.zone}" # Single zone
-  cluster    = google_container_cluster.primary.name
-  
+  name     = google_container_cluster.primary.name
+  location = "${var.region}-${var.zone}" # Single zone
+  cluster  = google_container_cluster.primary.name
+
   node_count = var.gke_num_nodes
 
   node_config {
